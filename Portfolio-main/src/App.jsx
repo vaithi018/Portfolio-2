@@ -28,16 +28,17 @@ const lines = [
 const wordAnimation = {
   hidden: {
     opacity: 0,
-    y: "100%",
-    filter: "blur(4px)",
+    y: 20,
+    filter: "blur(8px)",
   },
   show: {
     opacity: 1,
-    y: "0%",
+    y: 0,
     filter: "blur(0px)",
     transition: {
-      duration: 0.4,
-      ease: "easeOut",
+      type: "spring",
+      stiffness: 100,
+      damping: 15,
     },
   },
 };
